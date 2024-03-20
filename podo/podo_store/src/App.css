@@ -13,14 +13,35 @@ a {
 
 .navbar_logo {
   font-size: 30px;
+  font-family: 'Noto_Sans_KR_Bold';
 }
 
 .navbar_menu {
   display: flex;
   list-style: none;
   padding-left: 0;
+  font-size: 16px;
 }
 
 .navbar_menu li {
-  padding: 8px 12px;
+  padding: 8px 30px;
+}
+
+.main_body {
+  display: flex;
+  height: 940px;
+  justify-content: center;
+}
+
+.main_footer {
+  text-align: right;
+}
+.social_link_text {
+  font-family: 'Noto_Sans_KR_Bold';
+  font-size: 30px;
+  padding-right: 54px;
+}
+
+.social_link_text img {
+  padding-left: 11px;
 }

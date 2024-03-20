@@ -1,5 +1,8 @@
-//import logo from './logo.svg';
 import './App.css';
+import mainSampleImg from './assets/image/mainsampleimg.png';
+import instagram_Img from './assets/image/instagram.png';
+import youtube_Img from './assets/image/youtube.png';
+import x_Img from './assets/image/x.png';
 
 function App() {
   return (
@@ -26,6 +29,17 @@ function App() {
           <a href="">로그인</a>
         </div>
       </nav>
+      <div className="main_body">
+        <img src={mainSampleImg} alt="Main Img"></img>
+      </div>
+      <div className="main_footer">
+        <div className="social_link_text">
+          SOCIAL LINK
+          <img src={instagram_Img} alt="Instagram"></img>
+          <img src={youtube_Img} alt="Youtube"></img>
+          <img src={x_Img} alt="X"></img>
+        </div>
+      </div>
     </div>
   );
 }
