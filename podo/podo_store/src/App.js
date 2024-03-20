@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React123
-        </a>
-      </header>
+      <nav className="navbar">
+        <div className="navbar_logo">
+          <a href="">포도상점</a>
+        </div>
+        <ul className="navbar_menu">
+          <li>
+            <a href="">작품 둘러보기</a>
+          </li>
+          <li>
+            <a href="">지금 공연 중</a>
+          </li>
+          <li>
+            <a href="">작품 등록하기</a>
+          </li>
+          <li>
+            <a href="">포도상점 이야기</a>
+          </li>
+        </ul>
+        <div className="navbar_login">
+          <a href="">로그인</a>
+        </div>
+      </nav>
     </div>
   );
 }
