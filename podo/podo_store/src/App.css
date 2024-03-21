@@ -45,3 +45,9 @@ a {
 .social_link_text img {
   padding-left: 11px;
 }
+
+input.img-button {
+  background: url('./assets/image/instagram.png') no-repeat;
+  width: 30px;
+  height: 30px;
+}

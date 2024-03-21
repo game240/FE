@@ -1,3 +1,7 @@
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+
 import './App.css';
 import mainSampleImg from './assets/image/mainsampleimg.png';
 import instagram_Img from './assets/image/instagram.png';
@@ -22,7 +26,7 @@ function App() {
             <a href="">작품 등록하기</a>
           </li>
           <li>
-            <a href="">포도상점 이야기</a>
+            <Link to="/signin">포도상점 이야기</Link>
           </li>
         </ul>
         <div className="navbar_login">
@@ -35,9 +39,15 @@ function App() {
       <div className="main_footer">
         <div className="social_link_text">
           SOCIAL LINK
-          <img src={instagram_Img} alt="Instagram"></img>
-          <img src={youtube_Img} alt="Youtube"></img>
-          <img src={x_Img} alt="X"></img>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src={instagram_Img} alt="Instagram"></img>
+          </a>
+          <a href="https://www.youtube.com" target="_blank">
+            <img src={youtube_Img} alt="Youtube"></img>
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <img src={x_Img} alt="X"></img>
+          </a>
         </div>
       </div>
     </div>
