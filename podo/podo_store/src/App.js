@@ -1,7 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
-
 import './App.css';
 import mainSampleImg from './assets/image/mainsampleimg.png';
 import instagram_Img from './assets/image/instagram.png';
@@ -19,13 +15,25 @@ function App() {
       <div className="main_footer">
         <div className="social_link_text">
           SOCIAL LINK
-          <a href="https://www.instagram.com" target="_blank">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={instagram_Img} alt="Instagram"></img>
           </a>
-          <a href="https://www.youtube.com" target="_blank">
+          <a
+            href="https://www.youtube.com"
+            target="_blank "
+            rel="noopener noreferrer"
+          >
             <img src={youtube_Img} alt="Youtube"></img>
           </a>
-          <a href="https://www.twitter.com" target="_blank">
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={x_Img} alt="X"></img>
           </a>
         </div>
