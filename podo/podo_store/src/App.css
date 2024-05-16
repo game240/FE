@@ -36,18 +36,3 @@ a {
 .main_footer {
   text-align: right;
 }
-.social_link_text {
-  font-family: 'Noto_Sans_KR_Bold';
-  font-size: 30px;
-  padding-right: 54px;
-}
-
-.social_link_text img {
-  padding-left: 11px;
-}
-
-input.img-button {
-  background: url('./assets/image/instagram.png') no-repeat;
-  width: 30px;
-  height: 30px;
-}

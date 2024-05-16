@@ -11,16 +11,19 @@ function MainNav() {
         </div>
         <ul className="navbar_menu">
           <li>
-            <a href="">작품 둘러보기</a>
+            <Link to="/storemain">작품 둘러보기</Link>
           </li>
           <li>
-            <a href="">지금 공연 중</a>
+            <Link to="/nowplaying">지금 공연 중</Link>
           </li>
           <li>
-            <a href="">작품 등록하기</a>
+            <Link to="/scriptregist">작품 등록하기</Link>
           </li>
           <li>
-            <a href="">포도상점 이야기</a>
+            <Link to="/applyscript">희망 대본 신청하기</Link>
+          </li>
+          <li>
+            <Link to="/monthauthor">이달의 작가</Link>
           </li>
         </ul>
         <div className="navbar_login">
