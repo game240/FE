@@ -9,15 +9,80 @@ const User = {
 };
 
 function SignUp() {
-  const [email, setEmail] = useState('');
+  const [id, setId] = useState('');
   const [pw, setPw] = useState('');
+  const [pwcheck, setPwCheck] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
-  const [emailValid, setEmailValid] = useState(false);
+  const [idValid, setIdValid] = useState(false);
   const [pwValid, setPwValid] = useState(false);
-  const [notAllow, setNotAllow] = useState(true);
+  const [pwcheckValid, setPwCheckValid] = useState(false);
+  const [nameValid, setNameValid] = useState(false);
+  const [emailValid, setEmailValid] = useState(false);
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
+  const [notAllow, setNotAllow] = useState(true);
+  const [emailsendbtn, setEmailSendBtn] = useState(true);
+
+  // ID
+  // 동기 방식으로 처리해야 실시간으로 체크 가능(useEffect)
+  useEffect(() => {
+    const regex = /^[a-zA-Z0-9]{5,10}$/;
+    if (regex.test(id)) {
+      setIdValid(true);
+    } else {
+      setIdValid(false);
+    }
+  }, [id]);
+
+  const handleId = (e) => {
+    setId(e.target.value);
+  };
+
+  // PW
+  useEffect(() => {
+    const regex =
+      /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,11}$/;
+    if (regex.test(pw)) {
+      setPwValid(true);
+    } else {
+      setPwValid(false);
+    }
+  }, [pw]);
+
+  const handlePassword = (e) => {
+    setPw(e.target.value);
+  };
+
+  // PW Check
+  useEffect(() => {
+    if (pw === pwcheck) {
+      setPwCheckValid(true);
+    } else {
+      setPwCheckValid(false);
+    }
+  }, [pw, pwcheck]);
+
+  const PasswordCheck = (e) => {
+    setPwCheck(e.target.value);
+  };
+
+  // Name
+  useEffect(() => {
+    const regex = /^[가-힣a-zA-Z0-9]{3,8}$/;
+    if (regex.test(name)) {
+      setNameValid(true);
+    } else {
+      setNameValid(false);
+    }
+  }, [name]);
+
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+
+  // Email
+  useEffect(() => {
     const regex =
       /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
     if (regex.test(email)) {
@@ -25,27 +90,33 @@ function SignUp() {
     } else {
       setEmailValid(false);
     }
+  }, [email]);
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
   };
 
-  const handlePassword = (e) => {
-    setPw(e.target.value);
-    const regex =
-      /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
-    if (regex.test(pw)) {
-      setPwValid(true);
-    } else {
-      setPwValid(false);
+  const emailsend = () => {};
+
+  // 인증하기 버튼 활성화
+  useEffect(() => {
+    if (emailValid) {
+      setEmailSendBtn(false);
+      return;
     }
-  };
+    setEmailSendBtn(true);
+  }, [emailValid]);
 
+  // 회원가입 버튼
   const onClickConfirmButton = () => {
     if (email === User.email && pw === User.pw) {
-      alert('로그인 성공');
+      alert('회원가입 완료');
     } else {
-      alert('로그인 실패');
+      alert('회원가입 실패');
     }
   };
 
+  // 회원가입 버튼 활성화
   useEffect(() => {
     if (emailValid && pwValid) {
       setNotAllow(false);
@@ -58,25 +129,26 @@ function SignUp() {
     <div className="Signin">
       <MainNav />
       <div className="page">
-        <div className="titleWrap">
-          귀한 곳에
-          <br />
-          누추한 분이...
-        </div>
+        <div className="titleWrap">회원가입</div>
         <div className="contentWrap">
           <div className="inputTitle">아이디</div>
           <div className="inputWrap">
             <input
               type="text"
               className="input"
-              placeholder="podo@naver.com"
-              value={email}
-              onChange={handleEmail}
+              placeholder="5~10자의 영문 및 숫자"
+              value={id}
+              onChange={handleId}
             />
           </div>
           <div className="errorMessageWrap">
-            {!emailValid && email.length > 0 && (
-              <div>올바른 이메일을 입력해주세요.</div>
+            {!idValid && id.length > 0 ? (
+              <div>올바른 아이디를 입력해주세요.</div>
+            ) : (
+              idValid &&
+              id.length > 0 && (
+                <div className="NerrorMessageWrap">유효한 아이디입니다.</div>
+              )
             )}
           </div>
 
@@ -87,14 +159,19 @@ function SignUp() {
             <input
               type="password"
               className="input"
-              placeholder="영문, 숫자, 특수문자 포함 8자 이상"
+              placeholder="영문, 숫자, 특수문자 포함 5~11자"
               value={pw}
               onChange={handlePassword}
             />
           </div>
           <div className="errorMessageWrap">
-            {!pwValid && pw.length > 0 && (
-              <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
+            {!pwValid && pw.length > 0 ? (
+              <div>5~11자의 영문, 숫자, 특수문자를 포함해야 합니다.</div>
+            ) : (
+              pwValid &&
+              pw.length > 0 && (
+                <div className="NerrorMessageWrap">유효한 비밀번호 입니다.</div>
+              )
             )}
           </div>
 
@@ -105,13 +182,19 @@ function SignUp() {
             <input
               type="password"
               className="input"
-              placeholder="영문, 숫자, 특수문자 포함 8자 이상"
-              onChange={handlePassword}
+              placeholder="영문, 숫자, 특수문자 포함 5~11자"
+              value={pwcheck}
+              onChange={PasswordCheck}
             />
           </div>
           <div className="errorMessageWrap">
-            {!pwValid && pw.length > 0 && (
-              <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
+            {!pwcheckValid && pwcheck.length > 0 ? (
+              <div>비밀번호가 일치하지 않습니다.</div>
+            ) : (
+              pwcheckValid &&
+              pwcheck.length > 0 && (
+                <div className="NerrorMessageWrap">비밀번호가 일치합니다.</div>
+              )
             )}
           </div>
 
@@ -122,28 +205,65 @@ function SignUp() {
             <input
               type="text"
               className="input"
-              placeholder="3글자 이상 입력해주세요."
+              placeholder="한글, 영문, 숫자 3~8자"
+              value={name}
+              onChange={handleName}
             />
           </div>
           <div className="errorMessageWrap">
-            {!pwValid && pw.length > 0 && <div>3글자 이상 입력해주세요.</div>}
+            {!nameValid && name.length > 0 ? (
+              <div>8자 이하의 한글, 영문, 숫자만 사용 가능합니다.</div>
+            ) : (
+              nameValid &&
+              name.length > 0 && (
+                <div className="NerrorMessageWrap">
+                  사용 가능한 닉네임 입니다.
+                </div>
+              )
+            )}
           </div>
 
+          <div className="inputTitle">이메일</div>
+          <div className="inputWrap">
+            <input
+              type="text"
+              className="input"
+              placeholder="podo@store.com"
+              value={email}
+              onChange={handleEmail}
+            />
+          </div>
+          <div className="errorMessageWrap">
+            {!emailValid && email.length > 0 && (
+              <div>올바른 이메일을 입력해주세요.</div>
+            )}
+          </div>
+          <button
+            onClick={emailsend}
+            disabled={emailsendbtn}
+            className="bottomButton"
+          >
+            인증하기
+          </button>
+
           <div style={{ marginTop: '26px' }} className="inputTitle">
-            전화번호
+            인증 번호 입력
           </div>
           <div className="inputWrap">
             <input
-              type="tel"
+              type="text"
               className="input"
-              placeholder="영문, 숫자, 특수문자 포함 8자 이상"
+              placeholder="인증번호 6자리 입력"
             />
           </div>
           <div className="errorMessageWrap">
             {!pwValid && pw.length > 0 && (
-              <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
+              <div>인증번호가 일치 하지 않습니다.</div>
             )}
           </div>
+          <button onClick={onClickConfirmButton} className="bottomButton">
+            확인
+          </button>
         </div>
         <div>
           <button

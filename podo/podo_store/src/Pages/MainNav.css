@@ -26,3 +26,8 @@ a {
 .navbar_menu li {
   padding: 8px 30px;
 }
+
+.signin_btn {
+  border-radius: 20px;
+  background-color: white;
+}

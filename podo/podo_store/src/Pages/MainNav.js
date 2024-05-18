@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './MainNav.css';
 
 function MainNav() {
+  const movePage = useNavigate();
+
+  function mvSignIn() {
+    movePage('/signin');
+  }
   return (
     <div className="App">
       <nav className="navbar">
@@ -27,7 +33,9 @@ function MainNav() {
           </li>
         </ul>
         <div className="navbar_login">
-          <Link to="/signin">로그인</Link>
+          <button onClick={mvSignIn} className="signin_btn">
+            로그인
+          </button>
         </div>
       </nav>
     </div>

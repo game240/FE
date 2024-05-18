@@ -60,8 +60,12 @@
 
 .errorMessageWrap {
   margin-top: 8px;
-  color: #ef0000;
+  color: #ff6767;
   font-size: 12px;
+}
+
+.NerrorMessageWrap {
+  color: #00c850;
 }
 
 .bottomButton {
