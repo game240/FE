@@ -1,7 +1,11 @@
 import './SignUp.css';
 import MainNav from './MainNav';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+
+const api = {
+  emailCheck: 'https://example.com/api/emailCheck',
+};
 
 const User = {
   email: 'test@naver.com',
@@ -23,6 +27,12 @@ function SignUp() {
 
   const [notAllow, setNotAllow] = useState(true);
   const [emailsendbtn, setEmailSendBtn] = useState(true);
+
+  // 이메일 인증
+  const [formValue, setFormValue] = useState({ email: '' });
+  const [isGetCode, setIsGetCode] = useState(false);
+  const [isTimer, setIsTimer] = useState(false);
+  const [count, setCount] = useState(0);
 
   // ID
   // 동기 방식으로 처리해야 실시간으로 체크 가능(useEffect)
