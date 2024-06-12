@@ -7,7 +7,9 @@ const Nav = () => {
 
   return (
     <S.Container>
-      <h3>포도상점</h3>
+      <h3>
+        <a href="/">포도상점</a>
+      </h3>
       <S.NavList>
         <li>
           <h5>작품 둘러보기</h5>
