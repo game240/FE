@@ -20,7 +20,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font-weight: ${FONT_WEIGHT.regular};
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
@@ -58,7 +57,6 @@ const GlobalStyle = createGlobalStyle`
   #root {
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
-    font-weight: ${FONT_WEIGHT.regular};
     font-style: normal;
   }
 
@@ -66,11 +64,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
-  h1 { ${FONT_H1} }
-  h2 { ${FONT_H2} }
-  h3 { ${FONT_H3} }
-  h4 { ${FONT_H4} }
-  h5 { ${FONT_H5} }
+  h1 { ${FONT_H1}; }
+  h2 { ${FONT_H2}; }
+  h3 { ${FONT_H3}; }
+  h4 { ${FONT_H4}; }
+  h5 { ${FONT_H5}; }
 
 `;
 
