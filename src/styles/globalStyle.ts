@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
+    font-weight: ${FONT_WEIGHT.regular};
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
