@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { FONT_H1, FONT_H2, FONT_H3, FONT_H4, FONT_H5, FONT_H6 } from "./font";
+import { FONT_H1, FONT_H2, FONT_H3, FONT_H4, FONT_H5 } from "./font";
 import FONT_WEIGHT from "./fontWeight";
 
 const GlobalStyle = createGlobalStyle`
@@ -71,7 +71,6 @@ const GlobalStyle = createGlobalStyle`
   h3 { ${FONT_H3} }
   h4 { ${FONT_H4} }
   h5 { ${FONT_H5} }
-  h6 { ${FONT_H6} }
 
 `;
 
