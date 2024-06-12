@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { FONT_H1, FONT_H2, FONT_H3, FONT_H4, FONT_H5, FONT_H6 } from "./font";
-import theme from "./theme";
+import FONT_WEIGHT from "./fontWeight";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
   #root {
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
-    font-weight: ${theme.FONT_WEIGHT.regular};
+    font-weight: ${FONT_WEIGHT.regular};
     font-style: normal;
   }
 
