@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import { FONT_H1, FONT_H2, FONT_H3, FONT_H4, FONT_H5 } from "./font";
-import FONT_WEIGHT from "./fontWeight";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,

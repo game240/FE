@@ -1,9 +1,9 @@
 import COLOR from "@/styles/color";
-import { FlexBetween } from "@/styles/flex";
+import { FlexBetweenCenter } from "@/styles/flex";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  ${FlexBetween};
+  ${FlexBetweenCenter};
   height: 95px;
   padding: 0 13.5rem;
 `;
@@ -18,7 +18,7 @@ export const NavList = styled.ul`
 `;
 
 export const IconBox = styled.div`
-  ${FlexBetween};
+  ${FlexBetweenCenter};
   gap: 4rem;
   padding: 0 1rem;
   & > svg {

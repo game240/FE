@@ -9,6 +9,11 @@ export const FlexCenter = css`
 export const FlexBetween = css`
   display: flex;
   justify-content: space-between;
+`;
+
+export const FlexBetweenCenter = css`
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 `;
 
