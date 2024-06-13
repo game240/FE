@@ -20,3 +20,6 @@ export const NAV_LIST = [
     element: <IoSettingsOutline color={COLOR.grey7} />,
   },
 ];
+
+// 찜한 작품 - DropDown
+export const LIKED_DROPDOWN = ["최신순", "높은 가격순", "낮은 가격순"];
