@@ -64,7 +64,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     background-color: ${COLOR.puple1};
-    font-size: 62.5%;
+    font-size: 62.5%; // 10px
   }
 
   h1 { ${FONT_H1}; font-weight: ${FONT_WEIGHT.bold}; }
@@ -72,6 +72,18 @@ const GlobalStyle = createGlobalStyle`
   h3 { ${FONT_H3}; font-weight: ${FONT_WEIGHT.bold}; }
   h4 { ${FONT_H4}; font-weight: ${FONT_WEIGHT.bold}; }
   h5 { ${FONT_H5}; font-weight: ${FONT_WEIGHT.bold}; }
+
+  @media (max-width: 1680px) {
+    html {
+      font-size: 50%; // 8px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    html {
+      font-size: 37.5%; // 6px;
+    }
+  }
 
 `;
 
