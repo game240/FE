@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { FONT_H1, FONT_H2, FONT_H3, FONT_H4, FONT_H5 } from "./font";
 import COLOR from "./color";
+import { FlexColumn } from "./flex";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -27,9 +28,6 @@ const GlobalStyle = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
-  body {
-    line-height: 1;
-  }
   ol, ul {
     list-style: none;
   }
@@ -55,6 +53,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
+    ${FlexColumn};
+    min-height: 100vh;
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;

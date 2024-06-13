@@ -6,7 +6,6 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   padding: 2.5rem 3rem;
-  bottom: 0;
   color: ${COLOR.grey7};
   background-color: white;
 
