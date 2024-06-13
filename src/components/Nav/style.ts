@@ -1,4 +1,5 @@
 import COLOR from "@/styles/color";
+import { SCALE } from "@/styles/common";
 import { FlexBetweenCenter } from "@/styles/flex";
 import styled from "styled-components";
 
@@ -35,7 +36,7 @@ export const IconBox = styled.div`
 
     &:hover {
       color: ${COLOR.grey7};
-      transform: scale(1.1);
+      ${SCALE};
     }
   }
 `;

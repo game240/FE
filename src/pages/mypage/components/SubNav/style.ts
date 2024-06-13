@@ -1,4 +1,5 @@
 import COLOR from "@/styles/color";
+import { SCALE } from "@/styles/common";
 import { FlexBetweenCenter, FlexColumn } from "@/styles/flex";
 import { FONT_LARGE } from "@/styles/font";
 import styled from "styled-components";
@@ -28,7 +29,7 @@ export const Item = styled.div<{ $isCurrent: boolean }>`
   }
 
   &:hover {
-    transform: scale(1.05);
+    ${SCALE};
     background-color: ${COLOR.puple2};
   }
 `;

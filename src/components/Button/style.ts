@@ -2,13 +2,20 @@ import styled from "styled-components";
 import COLOR from "@/styles/color";
 import { FONT_LARGE } from "@/styles/font";
 import { FONT_BOLD } from "@/styles/fontWeight";
+import { SCALE } from "@/styles/common";
 
 export const Container = styled.button<{ $isDisabled: boolean }>`
   border-radius: 5rem;
   background-color: ${({ $isDisabled }) =>
     $isDisabled ? COLOR.grey4 : COLOR.puple4};
   color: ${({ $isDisabled }) => ($isDisabled ? COLOR.grey1 : COLOR.grey2)};
-  ${FONT_BOLD}
+  ${FONT_BOLD};
+  cursor: pointer;
+  transition: transform 0.15s;
+
+  &:hover {
+    ${SCALE};
+  }
 `;
 
 export const SmallContainer = styled(Container)`
