@@ -1,21 +1,14 @@
 import COLOR from "@/styles/color";
-import {
-  FlexBetweenCenter,
-  FlexColumn,
-  FlexColumnAlign,
-  FlexColumnBetween,
-} from "@/styles/flex";
+import { FlexBetweenCenter, FlexColumn, FlexColumnAlign } from "@/styles/flex";
 import { FONT_SMALL } from "@/styles/font";
 import FONT_WEIGHT from "@/styles/fontWeight";
 import styled from "styled-components";
 
-export const Container = styled.div`
-  ${FlexColumnBetween};
-  gap: 50px;
-  max-width: 146rem;
-  margin: 0 auto;
+export const Section = styled.section`
   padding: 2.5rem 3rem;
+  bottom: 0;
   color: ${COLOR.grey7};
+  background-color: white;
 
   & p {
     ${FONT_SMALL};
@@ -23,6 +16,9 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
+  max-width: 146rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
   & > h4 {
     color: black;
     margin-bottom: 0.5rem;
@@ -30,6 +26,8 @@ export const Header = styled.div`
 `;
 
 export const Bottom = styled.div`
+  max-width: 146rem;
+  margin: 0 auto;
   ${FlexBetweenCenter};
   ${FONT_SMALL};
 `;

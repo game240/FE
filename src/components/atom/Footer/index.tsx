@@ -2,7 +2,7 @@ import * as S from "./style";
 
 const Footer = () => {
   return (
-    <S.Container>
+    <S.Section>
       <S.Header>
         <h4>포도상점</h4>
         <p>Copyright © 2024 포도상점. Powered by 포도상점</p>
@@ -67,7 +67,7 @@ const Footer = () => {
           </ul>
         </S.SiteMap>
       </S.Bottom>
-    </S.Container>
+    </S.Section>
   );
 };
 

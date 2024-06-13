@@ -7,7 +7,7 @@ const COLOR = {
   grey6: "#777777",
   grey7: "#3C3C3C",
 
-  puple1: "#F4F4F4",
+  puple1: "#F4F2FF",
   puple2: "#EEEBFF",
   puple3: "#DCD6FF",
   puple4: "#8E7BFF",

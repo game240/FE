@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { FONT_H1, FONT_H2, FONT_H3, FONT_H4, FONT_H5 } from "./font";
+import COLOR from "./color";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -60,6 +61,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    background-color: ${COLOR.puple1};
     font-size: 62.5%;
   }
 
