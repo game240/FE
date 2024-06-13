@@ -29,5 +29,6 @@ export const Item = styled.div<{ $isCurrent: boolean }>`
 
   &:hover {
     transform: scale(1.05);
+    background-color: ${COLOR.puple2};
   }
 `;
