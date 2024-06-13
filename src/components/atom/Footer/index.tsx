@@ -28,10 +28,7 @@ const Footer = () => {
               <a href="#">작품 등록하기</a>
             </li>
             <li>
-              <a href="#">희망 대본 신청</a>
-            </li>
-            <li>
-              <a href="#">게시판</a>
+              <a href="#">희망 대본 신청하기</a>
             </li>
           </ul>
           <ul>

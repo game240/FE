@@ -13,7 +13,12 @@ export const NavList = styled.ul`
   gap: 50px;
 
   & > li {
+    color: ${COLOR.grey6};
     cursor: pointer;
+
+    &: hover {
+      color: ${COLOR.grey7};
+    }
   }
 `;
 
@@ -29,6 +34,7 @@ export const IconBox = styled.div`
     transition: 0.15s;
 
     &:hover {
+      color: ${COLOR.grey7};
       transform: scale(1.1);
     }
   }
