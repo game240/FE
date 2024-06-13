@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Nav, Router } from "./components";
-import Footer from "./components/atom/Footer";
+import Nav from "./components/Nav";
+import Router from "./components/Router";
+import Footer from "./components/Footer";
 
 function App() {
   return (
