@@ -1,3 +1,4 @@
+import { MAX_WIDTH } from "@/constants/common";
 import COLOR from "@/styles/color";
 import { FlexBetweenCenter, FlexColumn, FlexColumnAlign } from "@/styles/flex";
 import { FONT_SMALL } from "@/styles/font";
@@ -15,7 +16,7 @@ export const Section = styled.section`
 `;
 
 export const Header = styled.div`
-  max-width: 146rem;
+  max-width: ${MAX_WIDTH};
   margin: 0 auto;
   margin-bottom: 5rem;
   & > h4 {
@@ -25,7 +26,7 @@ export const Header = styled.div`
 `;
 
 export const Bottom = styled.div`
-  max-width: 146rem;
+  max-width: ${MAX_WIDTH};
   margin: 0 auto;
   ${FlexBetweenCenter};
   ${FONT_SMALL};
