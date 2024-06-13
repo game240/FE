@@ -1,8 +1,10 @@
 import { useState } from "react";
 import * as S from "./style";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
+  const navigate = useNavigate();
   const [isAuth, setIsAuth] = useState<boolean>(false);
 
   return (
@@ -30,7 +32,7 @@ const Nav = () => {
       ) : (
         <S.IconBox>
           <AiOutlineShoppingCart />
-          <AiOutlineUser />
+          <AiOutlineUser onClick={() => navigate("/mypage/liked")} />
         </S.IconBox>
       )}
     </S.Container>
