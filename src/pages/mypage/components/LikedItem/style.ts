@@ -1,6 +1,4 @@
-import COLOR from "@/styles/color";
-import { FlexAlign, FlexBetween, FlexColumn } from "@/styles/flex";
-import { FONT_LARGE } from "@/styles/font";
+import { FlexColumn } from "@/styles/flex";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -28,26 +26,5 @@ export const ImgBox = styled.div`
     width: 5rem;
     height: 5rem;
     cursor: pointer;
-  }
-`;
-
-export const Description = styled.div`
-  ${FlexColumn};
-  gap: 1rem;
-`;
-
-export const Price = styled.div`
-  ${FlexBetween};
-
-  .price-box {
-    ${FlexAlign};
-    gap: 6px;
-    ${FONT_LARGE};
-
-    & > svg {
-      width: 2.8rem;
-      height: 2.8rem;
-      color: ${COLOR.blue3};
-    }
   }
 `;
