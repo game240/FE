@@ -1,9 +1,6 @@
 import { NAV_LIST } from "@/constants/mypage";
 import * as S from "./style";
-
-interface SubNavType {
-  currentTab: string;
-}
+import { SubNavType } from "@/interface/mypageType";
 
 const SubNav = ({ currentTab }: SubNavType) => {
   return (
