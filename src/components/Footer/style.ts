@@ -2,7 +2,7 @@ import { MAX_WIDTH } from "@/constants/common";
 import COLOR from "@/styles/color";
 import { FlexBetweenCenter, FlexColumn, FlexColumnAlign } from "@/styles/flex";
 import { FONT_SMALL } from "@/styles/font";
-import FONT_WEIGHT from "@/styles/fontWeight";
+import { FONT_BOLD } from "@/styles/fontWeight";
 import styled from "styled-components";
 
 export const Section = styled.section`
@@ -56,6 +56,6 @@ export const SiteMap = styled.div`
 
   & > ul > li:first-child {
     color: ${COLOR.grey7};
-    font-weight: ${FONT_WEIGHT.bold};
+    ${FONT_BOLD};
   }
 `;

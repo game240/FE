@@ -1,5 +1,6 @@
 import * as S from "./style";
 import ItemInfo from "../ItemInfo";
+import Button from "@/components/Button";
 
 const PurchaseItem = () => {
   return (
@@ -8,7 +9,7 @@ const PurchaseItem = () => {
       <div className="item">
         <ItemInfo />
       </div>
-      <button>후기 작성</button>
+      <Button size="medium">후기 작성</Button>
     </S.Container>
   );
 };
