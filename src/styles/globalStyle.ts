@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { FONT_H1, FONT_H2, FONT_H3, FONT_H4, FONT_H5 } from "./font";
 import COLOR from "./color";
 import { FlexColumn } from "./flex";
+import FONT_WEIGHT from "./fontWeight";
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -21,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
+    font: inherit;
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
@@ -65,11 +67,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
-  h1 { ${FONT_H1}; }
-  h2 { ${FONT_H2}; }
-  h3 { ${FONT_H3}; }
-  h4 { ${FONT_H4}; }
-  h5 { ${FONT_H5}; }
+  h1 { ${FONT_H1}; font-weight: ${FONT_WEIGHT.bold}; }
+  h2 { ${FONT_H2}; font-weight: ${FONT_WEIGHT.bold}; }
+  h3 { ${FONT_H3}; font-weight: ${FONT_WEIGHT.bold}; }
+  h4 { ${FONT_H4}; font-weight: ${FONT_WEIGHT.bold}; }
+  h5 { ${FONT_H5}; font-weight: ${FONT_WEIGHT.bold}; }
 
 `;
 

@@ -1,24 +1,15 @@
-import styled, { ThemeProvider } from "styled-components";
-import GlobalStyle from "@/styles/globalStyle";
-import theme from "./styles/fontWeight";
-import { Nav } from "./components";
+import styled from "styled-components";
+import { Nav, Router } from "./components";
 import Footer from "./components/atom/Footer";
 
 function App() {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Nav />
-
-        <Contents>
-          <div>
-            <p>content</p>
-          </div>
-        </Contents>
-
-        <Footer />
-      </ThemeProvider>
+      <Nav />
+      <Contents>
+        <Router />
+      </Contents>
+      <Footer />
     </>
   );
 }
