@@ -1,12 +1,19 @@
 import { NAV_LIST } from "@/constants/mypage";
 import * as S from "./style";
 import { SubNavType } from "@/interface/mypageType";
+import { useNavigate } from "react-router-dom";
 
 const SubNav = ({ currentTab }: SubNavType) => {
+  const navigate = useNavigate();
+
   return (
     <S.Container>
       {NAV_LIST.map((item) => (
-        <S.Item key={item.name} $isCurrent={item.name === currentTab}>
+        <S.Item
+          key={item.name}
+          $isCurrent={item.name === currentTab}
+          onClick={() => navigate(item.url)}
+        >
           <p className="item-name">{item.name}</p>
           {item.element}
         </S.Item>
