@@ -4,7 +4,7 @@ import * as S from "./style";
 const Liked = () => {
   return (
     <S.Section>
-      <SubNav />
+      <SubNav currentTab="찜한 작품" />
     </S.Section>
   );
 };

@@ -1,11 +1,15 @@
 import { NAV_LIST } from "@/constants/mypage";
 import * as S from "./style";
 
-const SubNav = () => {
+interface SubNavType {
+  currentTab: string;
+}
+
+const SubNav = ({ currentTab }: SubNavType) => {
   return (
     <S.Container>
       {NAV_LIST.map((item) => (
-        <S.Item key={item.name}>
+        <S.Item key={item.name} $isCurrent={item.name === currentTab}>
           <p className="item-name">{item.name}</p>
           {item.element}
         </S.Item>

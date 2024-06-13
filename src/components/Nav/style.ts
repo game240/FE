@@ -31,7 +31,7 @@ export const IconBox = styled.div`
     height: 4rem;
     color: ${COLOR.grey6};
     cursor: pointer;
-    transition: 0.15s;
+    transition: transform 0.15s;
 
     &:hover {
       color: ${COLOR.grey7};
