@@ -1,9 +1,10 @@
+import SubNav from "../components/SubNav";
 import * as S from "./style";
 
 const Liked = () => {
   return (
     <S.Section>
-      <p>mypage</p>
+      <SubNav />
     </S.Section>
   );
 };
