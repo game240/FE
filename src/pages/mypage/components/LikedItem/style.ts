@@ -27,6 +27,7 @@ export const ImgBox = styled.div`
     right: 1.3rem;
     width: 5rem;
     height: 5rem;
+    cursor: pointer;
   }
 `;
 

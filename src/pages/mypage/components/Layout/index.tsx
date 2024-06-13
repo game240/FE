@@ -6,7 +6,7 @@ const Layout = ({ currentTab, children }: LayoutType) => {
   return (
     <S.Section>
       <SubNav currentTab={currentTab} />
-      {children}
+      <S.Content>{children}</S.Content>
     </S.Section>
   );
 };
