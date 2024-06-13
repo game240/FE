@@ -19,7 +19,7 @@ const Contents = styled.div`
 
   & > * {
     max-width: 146rem;
-    padding: 0 3rem;
+    padding: 5rem 3rem;
     margin: 0 auto;
   }
 `;
