@@ -8,13 +8,13 @@ interface PurchaseItemPropsType {
 
 const PurchaseItem = ({ management }: PurchaseItemPropsType) => {
   return (
-    <S.Container>
+    <S.ItemContainer>
       <div className="alt-img" />
       <div className="item">
         <ItemInfo management={management} />
       </div>
       <Button size="medium">{management ? "수정" : "후기 작성"}</Button>
-    </S.Container>
+    </S.ItemContainer>
   );
 };
 

@@ -1,5 +1,5 @@
 import * as S from "./style";
-import PurchaseItem from "../PurchaseItem";
+import PurchaseItem from "./PurchaseItem";
 
 interface PurchaseListPropsType {
   management?: boolean;
@@ -7,7 +7,7 @@ interface PurchaseListPropsType {
 
 const PurchaseList = ({ management = false }: PurchaseListPropsType) => {
   return (
-    <S.Container>
+    <S.ListContainer>
       <S.Header>
         <h4 className="date">2024.06.14</h4>
       </S.Header>
@@ -15,7 +15,7 @@ const PurchaseList = ({ management = false }: PurchaseListPropsType) => {
         <PurchaseItem management={management} />
         <PurchaseItem management={management} />
       </S.List>
-    </S.Container>
+    </S.ListContainer>
   );
 };
 
