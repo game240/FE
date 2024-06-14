@@ -25,7 +25,7 @@ export const NAV_LIST = [
   {
     name: "QnA",
     element: <FaQuestion color="#FF00E5" />,
-    url: "/mypage/liked",
+    url: "/mypage/qna",
   },
   {
     name: "공연 소식 알려주기",
