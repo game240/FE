@@ -1,5 +1,12 @@
 import { createGlobalStyle } from "styled-components";
-import { FONT_H1, FONT_H2, FONT_H3, FONT_H4, FONT_H5 } from "./font";
+import {
+  FONT_H1,
+  FONT_H2,
+  FONT_H3,
+  FONT_H4,
+  FONT_H5,
+  FONT_LARGE,
+} from "./font";
 import COLOR from "./color";
 import { FlexColumn } from "./flex";
 import { FONT_BOLD } from "./fontWeight";
@@ -52,6 +59,19 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+  }
+  textarea {
+    padding: 3rem 4rem;
+    border: none;
+    border-radius: 0.8rem;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+    ${FONT_LARGE};
+
+    &:focus {
+      border: 1px solid ${COLOR.puple5};
+    }
   }
 
   #root {

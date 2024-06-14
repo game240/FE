@@ -39,6 +39,7 @@ export const Price = styled.div<{ $soldOut: boolean }>`
 
 export const PriceBox = styled.div`
   ${FlexBetween};
+  min-width: 25rem;
   max-width: 30rem;
 `;
 
