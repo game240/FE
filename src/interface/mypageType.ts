@@ -21,4 +21,5 @@ export interface QnAListPropsType {
 
 export interface PurchaseListPropsType {
   management: boolean;
+  data?: string;
 }

@@ -4,13 +4,13 @@ import Button from "@/components/Button";
 import { useNavigate } from "react-router-dom";
 import { PurchaseListPropsType } from "@/interface/mypageType";
 
-const PurchaseItem = ({ management }: PurchaseListPropsType) => {
+const PurchaseItem = ({ data, management }: PurchaseListPropsType) => {
   const navigate = useNavigate();
   return (
     <S.ItemContainer>
       <div className="alt-img" />
       <div className="item">
-        <ItemInfo management={management} />
+        <ItemInfo management={management} data={data} />
       </div>
       <Button size="medium" onClick={() => navigate(`/mypage/purchase/1`)}>
         {management ? "수정" : "후기 작성"}

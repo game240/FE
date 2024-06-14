@@ -4,6 +4,23 @@ import { FONT_LARGE } from "@/styles/font";
 import { FONT_BOLD } from "@/styles/fontWeight";
 import styled from "styled-components";
 
+export const Container = styled.div`
+  ${FlexColumn};
+  justify-content: center;
+  gap: 1rem;
+
+  .evaluation {
+    font-size: 2rem;
+    ${FONT_BOLD};
+    color: ${COLOR.puple4};
+  }
+`;
+
+export const Title = styled.div`
+  ${FlexAlign};
+  gap: 30px;
+`;
+
 export const Price = styled.div<{ $soldOut: boolean }>`
   ${FlexColumn};
   gap: 1rem;
@@ -41,15 +58,4 @@ export const PriceBox = styled.div`
   ${FlexBetween};
   min-width: 25rem;
   max-width: 30rem;
-`;
-
-export const Container = styled.div`
-  ${FlexColumn};
-  justify-content: center;
-  gap: 1rem;
-`;
-
-export const Title = styled.div`
-  ${FlexAlign};
-  gap: 30px;
 `;
