@@ -2,17 +2,24 @@ import { FaLightbulb, FaQuestionCircle } from "react-icons/fa";
 import * as S from "./style";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import COLOR from "@/styles/color";
+import { useToggle } from "@/hooks/useToggle";
 
 const QnAItem = () => {
+  const [isOpen, handleIsOpen] = useToggle(false);
+
   return (
     <S.ItemContainer>
-      <S.Section>
+      <S.Question>
         <FaQuestionCircle size="3.2rem" color={COLOR.puple7} />
         <p className="title">환불하려면 어떻게 해야하나요?</p>
-        <AiOutlineDown size="2.8rem" />
-      </S.Section>
+        {isOpen ? (
+          <AiOutlineUp size="2.8rem" onClick={handleIsOpen} />
+        ) : (
+          <AiOutlineDown size="2.8rem" onClick={handleIsOpen} />
+        )}
+      </S.Question>
 
-      <S.Section>
+      <S.Answer $isOpen={isOpen}>
         <FaLightbulb size="3.2rem" color="#FFD12E" />
         <p className="title">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
@@ -24,8 +31,7 @@ const QnAItem = () => {
           necessitatibus laboriosam ullam nulla omnis corporis cum, at, eaque
           maxime.
         </p>
-        <AiOutlineUp size="2.8rem" />
-      </S.Section>
+      </S.Answer>
     </S.ItemContainer>
   );
 };

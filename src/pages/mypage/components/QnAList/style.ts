@@ -20,7 +20,7 @@ export const ListContainer = styled.div`
   margin-bottom: 10rem;
 `;
 
-export const Section = styled.div`
+export const Question = styled.div`
   display: flex;
   gap: 1.5rem;
   padding: 1rem;
@@ -29,6 +29,10 @@ export const Section = styled.div`
     flex-grow: 1;
     ${FONT_LARGE};
   }
+`;
+
+export const Answer = styled(Question)<{ $isOpen?: boolean }>`
+  display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
 `;
 
 export const Header = styled.div`
