@@ -1,6 +1,6 @@
 import COLOR from "@/styles/color";
+import { SHADOW } from "@/styles/common";
 import { FlexColumn } from "@/styles/flex";
-import { SHADOW } from "@/styles/shadow";
 import styled from "styled-components";
 
 export const Container = styled.div<{ $width: string }>`
