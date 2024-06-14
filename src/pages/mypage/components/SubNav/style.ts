@@ -5,6 +5,7 @@ import { FONT_LARGE } from "@/styles/font";
 import styled from "styled-components";
 
 export const Container = styled.div`
+  flex-shrink: 0;
   ${FlexColumn};
   gap: 30px;
   width: 34.4rem;
