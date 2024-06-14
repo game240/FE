@@ -8,14 +8,14 @@ const QnAItem = () => {
   const [isOpen, handleIsOpen] = useToggle(false);
 
   return (
-    <S.ItemContainer>
+    <S.ItemContainer onClick={handleIsOpen}>
       <S.Question>
         <FaQuestionCircle size="3.2rem" color={COLOR.puple7} />
         <p className="title">환불하려면 어떻게 해야하나요?</p>
         {isOpen ? (
-          <AiOutlineUp size="2.8rem" onClick={handleIsOpen} />
+          <AiOutlineUp className="arrow" />
         ) : (
-          <AiOutlineDown size="2.8rem" onClick={handleIsOpen} />
+          <AiOutlineDown className="arrow" />
         )}
       </S.Question>
 

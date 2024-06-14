@@ -12,6 +12,14 @@ export const ItemContainer = styled.div`
     flex-shrink: 0;
     cursor: pointer;
   }
+
+  .arrow {
+    align-self: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    color: ${COLOR.grey5};
+    margin-right: 1rem;
+  }
 `;
 
 export const ListContainer = styled.div`
