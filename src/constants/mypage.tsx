@@ -20,7 +20,7 @@ export const NAV_LIST = [
   {
     name: "작품 관리",
     element: <TbPencilMinus color="#4CC602" />,
-    url: "/mypage/liked",
+    url: "/mypage/management",
   },
   {
     name: "QnA",
