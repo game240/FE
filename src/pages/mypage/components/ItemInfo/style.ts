@@ -4,9 +4,10 @@ import { FONT_LARGE } from "@/styles/font";
 import { FONT_BOLD } from "@/styles/fontWeight";
 import styled from "styled-components";
 
-export const Price = styled.div`
+export const Price = styled.div<{ $soldOut: boolean }>`
   ${FlexColumn};
   gap: 1rem;
+  color: ${({ $soldOut }) => ($soldOut ? COLOR.grey5 : "black")};
 
   .info {
     flex-shrink: 0;
@@ -17,7 +18,7 @@ export const Price = styled.div`
     & > svg {
       width: 2.8rem;
       height: 2.8rem;
-      color: ${COLOR.blue3};
+      color: ${({ $soldOut }) => ($soldOut ? COLOR.grey5 : COLOR.blue3)};
     }
   }
 

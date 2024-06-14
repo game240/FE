@@ -5,7 +5,7 @@ import { LuVenetianMask } from "react-icons/lu";
 
 const PriceInfo = ({ state, type, management }: PricePropsType) => {
   return (
-    <S.Price>
+    <S.Price $soldOut={management && state === "판매 중지"}>
       <div className="info">
         {type === "대본" && <FaFileAlt />}
         {type === "공연권" && <LuVenetianMask />}

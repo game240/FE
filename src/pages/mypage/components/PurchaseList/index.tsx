@@ -2,10 +2,10 @@ import * as S from "./style";
 import PurchaseItem from "../PurchaseItem";
 
 interface PurchaseListPropsType {
-  management: boolean;
+  management?: boolean;
 }
 
-const PurchaseList = ({ management }: PurchaseListPropsType) => {
+const PurchaseList = ({ management = false }: PurchaseListPropsType) => {
   return (
     <S.Container>
       <S.Header>
