@@ -17,3 +17,8 @@ export interface PricePropsType {
   type: string;
   management: boolean;
 }
+
+export interface QnAListPropsType {
+  title: string;
+  list: string[];
+}
