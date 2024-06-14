@@ -1,13 +1,5 @@
-import React from "react";
+import { ButtonPropsType } from "@/interface/commonType";
 import { LargeContainer, MediumContainer, SmallContainer } from "./style";
-
-interface ButtonPropsType {
-  size: string;
-  $isDisabled?: boolean;
-  children: React.ReactNode;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
-}
 
 const Button = ({
   size,

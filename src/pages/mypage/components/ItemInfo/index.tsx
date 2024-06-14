@@ -1,9 +1,9 @@
 import * as S from "./style";
 import LikedNumber from "@/components/LikedNumber";
-import { ItemInfoPropsType } from "@/interface/mypageType";
+import { PurchaseListPropsType } from "@/interface/mypageType";
 import PriceInfo from "./PriceInfo";
 
-const ItemInfo = ({ management }: ItemInfoPropsType) => {
+const ItemInfo = ({ management }: PurchaseListPropsType) => {
   return (
     <S.Container>
       <S.Title>

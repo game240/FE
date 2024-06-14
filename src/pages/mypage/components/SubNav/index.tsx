@@ -1,9 +1,9 @@
 import { NAV_LIST } from "@/constants/mypage";
 import * as S from "./style";
-import { SubNavType } from "@/interface/mypageType";
+import { SubNavPropsType } from "@/interface/mypageType";
 import { useNavigate } from "react-router-dom";
 
-const SubNav = ({ currentTab }: SubNavType) => {
+const SubNav = ({ currentTab }: SubNavPropsType) => {
   const navigate = useNavigate();
 
   return (

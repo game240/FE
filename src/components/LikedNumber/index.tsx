@@ -1,10 +1,7 @@
 import COLOR from "@/styles/color";
 import * as S from "./style";
 import { AiFillHeart } from "react-icons/ai";
-
-interface LikedNumberPropsType {
-  number: string;
-}
+import { LikedNumberPropsType } from "@/interface/commonType";
 
 const LikedNumber = ({ number }: LikedNumberPropsType) => {
   return (

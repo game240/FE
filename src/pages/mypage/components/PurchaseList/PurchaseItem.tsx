@@ -2,12 +2,9 @@ import * as S from "./style";
 import ItemInfo from "../ItemInfo";
 import Button from "@/components/Button";
 import { useNavigate } from "react-router-dom";
+import { PurchaseListPropsType } from "@/interface/mypageType";
 
-interface PurchaseItemPropsType {
-  management: boolean;
-}
-
-const PurchaseItem = ({ management }: PurchaseItemPropsType) => {
+const PurchaseItem = ({ management }: PurchaseListPropsType) => {
   const navigate = useNavigate();
   return (
     <S.ItemContainer>

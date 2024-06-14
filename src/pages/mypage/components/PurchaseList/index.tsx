@@ -1,11 +1,8 @@
 import * as S from "./style";
 import PurchaseItem from "./PurchaseItem";
+import { PurchaseListPropsType } from "@/interface/mypageType";
 
-interface PurchaseListPropsType {
-  management?: boolean;
-}
-
-const PurchaseList = ({ management = false }: PurchaseListPropsType) => {
+const PurchaseList = ({ management }: PurchaseListPropsType) => {
   return (
     <S.ListContainer>
       <S.Header>

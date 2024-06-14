@@ -1,15 +1,11 @@
 // Props Type
-export interface LayoutType {
+export interface LayoutPropsType {
   currentTab: string;
   children: React.ReactNode;
 }
 
-export interface SubNavType {
+export interface SubNavPropsType {
   currentTab: string;
-}
-
-export interface ItemInfoPropsType {
-  management: boolean;
 }
 
 export interface PricePropsType {
@@ -21,4 +17,8 @@ export interface PricePropsType {
 export interface QnAListPropsType {
   title: string;
   list: string[];
+}
+
+export interface PurchaseListPropsType {
+  management: boolean;
 }
