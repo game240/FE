@@ -8,6 +8,7 @@ import QnAMore from "@/pages/mypage/qna-more";
 import Review from "@/pages/mypage/review";
 import { Route, Routes } from "react-router-dom";
 import Login from "@/pages/auth/login";
+import SignIn from "@/pages/auth/signin";
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
 
       {/* 로그인 / 회원가입 */}
       <Route path="/login" element={<Login />} />
+      <Route path="/signin" element={<SignIn />} />
 
       {/* 마이페이지 */}
       <Route path="/mypage/liked" element={<Liked />} />

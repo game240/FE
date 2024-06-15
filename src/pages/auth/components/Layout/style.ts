@@ -1,5 +1,5 @@
 import { MAX_WIDTH } from "@/constants/common";
-import { FlexBetween } from "@/styles/flex";
+import { FlexBetween, FlexColumn } from "@/styles/flex";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -14,5 +14,15 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.8rem;
+  }
+`;
+
+export const Form = styled.form`
+  width: 59.1rem;
+  ${FlexColumn};
+  gap: 3rem;
+
+  & > h2 {
+    text-align: center;
   }
 `;

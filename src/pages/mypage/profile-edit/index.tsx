@@ -2,11 +2,11 @@ import Button from "@/components/Button";
 import Layout from "../components/Layout";
 import * as S from "./style";
 import InputField from "@/components/InputField";
-import { useProfileEditSchema } from "@/schema/useProfileEditSchema";
+import { useProfileSchema } from "@/schema/useProfileSchema";
 import { useToggle } from "@/hooks/useToggle";
 
 const ProfileEdit = () => {
-  const { register, handleSubmit, errors, isValid } = useProfileEditSchema();
+  const { register, handleSubmit, errors, isValid } = useProfileSchema();
   const [isOpenEmailCheck, handleIsOpenEmailCheck] = useToggle(false);
   const handleSubmitForm = () => alert("회원정보를 수정했습니다.");
 
@@ -58,7 +58,7 @@ const ProfileEdit = () => {
         <InputField
           title="이메일"
           placeholder="이메일을 입력해주세요"
-          buttonName={isOpenEmailCheck ? "취소" : "이메일 수정하기"}
+          buttonName={isOpenEmailCheck ? "취소" : "인증 요청"}
           handleButtonClick={handleIsOpenEmailCheck}
           error={errors.email}
           {...register("email")}
@@ -68,7 +68,7 @@ const ProfileEdit = () => {
           <InputField
             title="인증번호"
             placeholder="인증번호를 입력해주세요"
-            buttonName="인증번호 확인"
+            buttonName="인증 확인"
           />
         )}
 

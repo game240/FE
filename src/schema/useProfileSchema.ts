@@ -38,7 +38,7 @@ const schema = z
     }
   });
 
-export const useProfileEditSchema = () => {
+export const useProfileSchema = () => {
   const {
     register,
     handleSubmit,
