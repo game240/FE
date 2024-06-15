@@ -1,3 +1,5 @@
+import { FieldError } from "react-hook-form";
+
 export interface ButtonPropsType {
   size: string;
   $isDisabled?: boolean;
@@ -21,5 +23,7 @@ export interface PaginationPropsType {
 
 export interface InputFeildPropsType {
   title: string;
-  buttonName: string;
+  buttonName?: string;
+  error?: FieldError;
+  [key: string]: unknown;
 }

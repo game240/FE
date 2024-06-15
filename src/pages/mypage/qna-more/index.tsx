@@ -1,7 +1,7 @@
 import { QnAMorePropsType } from "@/interface/mypageType";
 import QnAList from "../components/QnAList";
 import Layout from "../components/Layout";
-import Pagination from "../components/Pagination";
+import Pagination from "@/components/Pagination";
 
 const QnAMore = ({ subject }: QnAMorePropsType) => {
   return (

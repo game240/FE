@@ -35,7 +35,7 @@ export const NAV_LIST = [
   {
     name: "회원 정보 수정",
     element: <IoSettingsOutline color={COLOR.grey7} />,
-    url: "/mypage/liked",
+    url: "/mypage/profile-edit",
   },
 ];
 

@@ -1,4 +1,5 @@
 import Main from "@/pages/main";
+import ProfileEdit from "@/pages/mypage/profile-edit";
 import Liked from "@/pages/mypage/liked";
 import Management from "@/pages/mypage/management";
 import Purchase from "@/pages/mypage/purchase";
@@ -23,6 +24,7 @@ const Router = () => {
         path="/mypage/qna/mine"
         element={<QnAMore subject="내가 등록한 질문" />}
       />
+      <Route path="/mypage/profile-edit" element={<ProfileEdit />} />
     </Routes>
   );
 };

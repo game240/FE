@@ -5,6 +5,7 @@ import { FONT_BOLD } from "@/styles/fontWeight";
 import { SCALE } from "@/styles/common";
 
 export const Container = styled.button<{ $isDisabled: boolean }>`
+  flex-shrink: 0;
   border-radius: 5rem;
   background-color: ${({ $isDisabled }) =>
     $isDisabled ? COLOR.grey4 : COLOR.puple4};
