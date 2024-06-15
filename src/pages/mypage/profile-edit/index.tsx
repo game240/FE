@@ -43,11 +43,11 @@ const ProfileEdit = () => {
             {...register("password")}
           />
           <InputField
-            type="passwordConfirm"
+            type="confirmPassword"
             title="비밀번호 확인"
             placeholder="비밀번호를 입력해주세요"
-            error={errors.passwordConfirm}
-            {...register("passwordConfirm")}
+            error={errors.confirmPassword}
+            {...register("confirmPassword")}
           />
         </div>
 
