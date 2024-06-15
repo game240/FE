@@ -13,7 +13,7 @@ const ProfileEdit = () => {
   return (
     <Layout currentTab="회원정보 수정">
       <S.Form onSubmit={handleSubmit(handleSubmitForm)}>
-        <div className="section-row">
+        <div className="section-column">
           <S.SectionImg>
             <div className="alt-img" />
             <Button type="button" size="medium">
@@ -38,7 +38,7 @@ const ProfileEdit = () => {
           </S.SectionName>
         </div>
 
-        <div className="section-row">
+        <div className="section-column">
           <InputField
             type="password"
             title="비밀번호"

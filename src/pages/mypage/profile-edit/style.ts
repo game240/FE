@@ -5,7 +5,7 @@ export const Form = styled.form`
   ${FlexColumn};
   gap: 5rem;
 
-  .section-row {
+  .section-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.8rem;
