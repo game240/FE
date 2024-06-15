@@ -14,3 +14,7 @@ export interface DropDownType {
 export interface LikedNumberPropsType {
   number: string;
 }
+
+export interface PaginationPropsType {
+  currentNumber: number;
+}
