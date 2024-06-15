@@ -74,6 +74,9 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px #fff inset ; -webkit-text-fill-color: ${COLOR.grey6}; }
+  input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color 5000s ease-in-out 0s; }
+
   #root {
     ${FlexColumn};
     min-height: 100vh;

@@ -36,14 +36,14 @@ const ProfileEdit = () => {
 
         <div className="section-row">
           <InputField
-            type="password"
+            // type="password"
             title="비밀번호"
             placeholder="비밀번호를 입력해주세요"
             error={errors.password}
             {...register("password")}
           />
           <InputField
-            type="confirmPassword"
+            // type="password"
             title="비밀번호 확인"
             placeholder="비밀번호를 입력해주세요"
             error={errors.confirmPassword}
@@ -63,10 +63,9 @@ const ProfileEdit = () => {
           title="인증번호"
           placeholder="인증번호를 입력해주세요"
           buttonName="인증번호 확인"
-          {...register("email")}
         />
 
-        <Button size="large" $isDisabled={!isValid}>
+        <Button size="large" disabled={!isValid}>
           수정 완료
         </Button>
       </S.Form>

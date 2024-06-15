@@ -3,25 +3,25 @@ import { LargeContainer, MediumContainer, SmallContainer } from "./style";
 
 const Button = ({
   size,
-  $isDisabled = false,
+  disabled = false,
   children,
   ...props
 }: ButtonPropsType) => {
   if (size === "small")
     return (
-      <SmallContainer $isDisabled={$isDisabled} {...props}>
+      <SmallContainer $isDisabled={disabled} {...props}>
         {children}
       </SmallContainer>
     );
   else if (size === "medium")
     return (
-      <MediumContainer $isDisabled={$isDisabled} {...props}>
+      <MediumContainer $isDisabled={disabled} {...props}>
         {children}
       </MediumContainer>
     );
   else if (size === "large")
     return (
-      <LargeContainer $isDisabled={$isDisabled} {...props}>
+      <LargeContainer $isDisabled={disabled} {...props}>
         {children}
       </LargeContainer>
     );
