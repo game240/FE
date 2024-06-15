@@ -3,9 +3,11 @@ import Layout from "../components/Layout";
 import * as S from "./style";
 import InputField from "@/components/InputField";
 import { useProfileEditSchema } from "@/hooks/useProfileEditSchema";
+import { useToggle } from "@/hooks/useToggle";
 
 const ProfileEdit = () => {
   const { register, handleSubmit, errors, isValid } = useProfileEditSchema();
+  const [isOpenEmailCheck, handleIsOpenEmailCheck] = useToggle(false);
   const handleSubmitForm = () => alert("회원정보를 수정했습니다.");
 
   return (
@@ -14,7 +16,9 @@ const ProfileEdit = () => {
         <div className="section-row">
           <S.SectionImg>
             <div className="alt-img" />
-            <Button size="medium">프로필 이미지 수정</Button>
+            <Button type="button" size="medium">
+              프로필 이미지 수정
+            </Button>
           </S.SectionImg>
 
           <S.SectionName>
@@ -36,14 +40,14 @@ const ProfileEdit = () => {
 
         <div className="section-row">
           <InputField
-            // type="password"
+            type="password"
             title="비밀번호"
             placeholder="비밀번호를 입력해주세요"
             error={errors.password}
             {...register("password")}
           />
           <InputField
-            // type="password"
+            type="password"
             title="비밀번호 확인"
             placeholder="비밀번호를 입력해주세요"
             error={errors.confirmPassword}
@@ -54,18 +58,21 @@ const ProfileEdit = () => {
         <InputField
           title="이메일"
           placeholder="이메일을 입력해주세요"
-          buttonName="이메일 수정하기"
+          buttonName={isOpenEmailCheck ? "취소" : "이메일 수정하기"}
+          handleButtonClick={handleIsOpenEmailCheck}
           error={errors.email}
           {...register("email")}
         />
 
-        <InputField
-          title="인증번호"
-          placeholder="인증번호를 입력해주세요"
-          buttonName="인증번호 확인"
-        />
+        {isOpenEmailCheck && (
+          <InputField
+            title="인증번호"
+            placeholder="인증번호를 입력해주세요"
+            buttonName="인증번호 확인"
+          />
+        )}
 
-        <Button size="large" disabled={!isValid}>
+        <Button type="submit" size="large" disabled={!isValid}>
           수정 완료
         </Button>
       </S.Form>

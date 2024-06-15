@@ -25,5 +25,6 @@ export interface InputFeildPropsType {
   title: string;
   buttonName?: string;
   error?: FieldError;
+  handleButtonClick?: () => void;
   [key: string]: unknown;
 }
