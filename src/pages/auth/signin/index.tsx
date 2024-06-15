@@ -2,9 +2,11 @@ import InputField from "@/components/InputField";
 import Layout from "../components/Layout";
 import { useProfileSchema } from "@/schema/useProfileSchema";
 import Button from "@/components/Button";
+import { useToggle } from "@/hooks/useToggle";
 
 const SignIn = () => {
-  const { register, handleSubmit, errors, isValid } = useProfileSchema();
+  const [isChecked, handleChecked] = useToggle(false);
+  const { register, handleSubmit, errors, isDirty } = useProfileSchema();
   const handleSubmitForm = () => alert("회원가입에 성공했습니다.");
 
   return (
@@ -50,7 +52,7 @@ const SignIn = () => {
         buttonName="인증 확인"
       />
 
-      <Button type="submit" size="medium" disabled={!isValid}>
+      <Button type="submit" size="medium" disabled={!isDirty && isChecked}>
         회원가입
       </Button>
     </Layout>

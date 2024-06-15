@@ -42,12 +42,12 @@ export const useProfileSchema = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors, isDirty },
   } = useForm({
     mode: "onSubmit",
     reValidateMode: "onSubmit",
     resolver: zodResolver(schema),
   });
 
-  return { register, handleSubmit, errors, isValid };
+  return { register, handleSubmit, isDirty, errors };
 };

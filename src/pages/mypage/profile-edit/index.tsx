@@ -6,8 +6,9 @@ import { useProfileSchema } from "@/schema/useProfileSchema";
 import { useToggle } from "@/hooks/useToggle";
 
 const ProfileEdit = () => {
-  const { register, handleSubmit, errors, isValid } = useProfileSchema();
+  const [isChecked, handleChecked] = useToggle(false);
   const [isOpenEmailCheck, handleIsOpenEmailCheck] = useToggle(false);
+  const { register, handleSubmit, errors, isDirty } = useProfileSchema();
   const handleSubmitForm = () => alert("회원정보를 수정했습니다.");
 
   return (
@@ -72,7 +73,7 @@ const ProfileEdit = () => {
           />
         )}
 
-        <Button type="submit" size="large" disabled={!isValid}>
+        <Button type="submit" size="large" disabled={!isDirty && isChecked}>
           수정 완료
         </Button>
       </S.Form>
