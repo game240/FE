@@ -18,3 +18,8 @@ export interface LikedNumberPropsType {
 export interface PaginationPropsType {
   currentNumber: number;
 }
+
+export interface InputFeildPropsType {
+  title: string;
+  buttonName: string;
+}
