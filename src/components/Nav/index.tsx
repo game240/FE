@@ -28,7 +28,9 @@ const Nav = () => {
       </S.NavList>
 
       {isAuth ? (
-        <p>로그인</p>
+        <h4 className="login" onClick={() => navigate(`/login`)}>
+          로그인
+        </h4>
       ) : (
         <S.IconBox>
           <AiOutlineShoppingCart />

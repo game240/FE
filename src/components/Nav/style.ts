@@ -7,6 +7,16 @@ export const Container = styled.div`
   ${FlexBetweenCenter};
   height: 95px;
   padding: 0 13.5rem;
+
+  .login {
+    width: 15.1rem;
+    color: ${COLOR.grey6};
+    cursor: pointer;
+
+    &:hover {
+      color: ${COLOR.grey7};
+    }
+  }
 `;
 
 export const NavList = styled.ul`
