@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import Layout from "../components/Layout";
 import * as S from "./style";
 import InputField from "@/components/InputField";
-import { useProfileEditSchema } from "@/hooks/useProfileEditSchema";
+import { useProfileEditSchema } from "@/schema/useProfileEditSchema";
 import { useToggle } from "@/hooks/useToggle";
 
 const ProfileEdit = () => {

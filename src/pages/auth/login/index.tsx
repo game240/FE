@@ -1,17 +1,15 @@
 import * as S from "./style";
-import character from "@/assets/login/character.svg";
 import Button from "@/components/Button";
 import InputField from "@/components/InputField";
-import { useLoginSchema } from "@/hooks/useLoginSchema";
+import { useLoginSchema } from "@/schema/useLoginSchema";
+import Layout from "../components/Layout";
 
 const Login = () => {
   const { register, handleSubmit, errors } = useLoginSchema();
   const handleSubmitForm = () => alert("로그인에 성공했습니다.");
 
   return (
-    <S.Container>
-      <img src={character} alt="character" />
-
+    <Layout>
       <S.Form onSubmit={handleSubmit(handleSubmitForm)}>
         <h2>로그인</h2>
         <InputField
@@ -40,7 +38,7 @@ const Login = () => {
           </Button>
         </div>
       </S.Form>
-    </S.Container>
+    </Layout>
   );
 };
 
