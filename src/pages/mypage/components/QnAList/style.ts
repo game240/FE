@@ -1,5 +1,5 @@
 import COLOR from "@/styles/color";
-import { FlexBetween, FlexColumn } from "@/styles/flex";
+import { FlexBetweenCenter, FlexColumn } from "@/styles/flex";
 import { FONT_LARGE } from "@/styles/font";
 import styled from "styled-components";
 
@@ -44,5 +44,5 @@ export const Answer = styled(Question)<{ $isOpen?: boolean }>`
 `;
 
 export const Header = styled.div`
-  ${FlexBetween};
+  ${FlexBetweenCenter};
 `;

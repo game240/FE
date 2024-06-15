@@ -17,9 +17,15 @@ export interface PricePropsType {
 export interface QnAListPropsType {
   title: string;
   list: string[];
+  search?: boolean;
+  button?: boolean;
 }
 
 export interface PurchaseListPropsType {
   management: boolean;
   data?: string;
+}
+
+export interface QnAMorePropsType {
+  subject: string;
 }

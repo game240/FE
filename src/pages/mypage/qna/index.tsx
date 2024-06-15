@@ -6,8 +6,8 @@ import Button from "@/components/Button";
 const QnA = () => {
   return (
     <Layout currentTab="QnA">
-      <QnAList title="FAQ" list={[...new Array(4)]} />
-      <QnAList title="내가 등록한 질문" list={[...new Array(4)]} />
+      <QnAList title="FAQ" list={[...new Array(4)]} button />
+      <QnAList title="내가 등록한 질문" list={[...new Array(4)]} button />
       <S.Question>
         <h3>질문하기</h3>
         <textarea placeholder="궁금한 점을 적어주세요" />
