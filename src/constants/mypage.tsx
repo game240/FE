@@ -13,7 +13,7 @@ export const NAV_LIST = [
     url: "/mypage/liked",
   },
   {
-    name: "구매한 작품",
+    name: "구매 작품",
     element: <IoMdPaper color="#0094FF" />,
     url: "/mypage/purchase",
   },
@@ -28,7 +28,7 @@ export const NAV_LIST = [
     url: "/mypage/qna",
   },
   {
-    name: "공연 소식 알려주기",
+    name: "공연 홍보하기",
     element: <AiFillNotification color="#FFF500" />,
     url: "/mypage/liked",
   },
