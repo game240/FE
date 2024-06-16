@@ -2,6 +2,7 @@ import * as S from "./style";
 import ItemInfo from "../components/ItemInfo";
 import Layout from "../components/Layout";
 import { LuGrape } from "react-icons/lu";
+import Button from "@/components/Button";
 
 const Review = () => {
   return (
@@ -36,6 +37,8 @@ const Review = () => {
           <li>댓글은 포도상점에서 확인하지 않습니다.</li>
         </ul>
       </S.SectionText>
+
+      <Button size="large">제출</Button>
     </Layout>
   );
 };
