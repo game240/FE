@@ -16,12 +16,14 @@ const SignIn = () => {
         title="아이디"
         placeholder="아이디를 입력해주세요"
         error={errors.id}
+        required
         {...register("id")}
       />
       <InputField
         title="닉네임"
         placeholder="닉네임을 입력해주세요"
         error={errors.nick_name}
+        required
         {...register("nick_name")}
       />
       <InputField
@@ -29,6 +31,7 @@ const SignIn = () => {
         title="비밀번호"
         placeholder="비밀번호를 입력해주세요"
         error={errors.password}
+        required
         {...register("password")}
       />
       <InputField
@@ -36,6 +39,7 @@ const SignIn = () => {
         title="비밀번호 확인"
         placeholder="비밀번호를 입력해주세요"
         error={errors.confirmPassword}
+        required
         {...register("confirmPassword")}
       />
       <InputField
@@ -43,6 +47,7 @@ const SignIn = () => {
         placeholder="이메일을 입력해주세요"
         buttonName="인증 요청"
         error={errors.email}
+        required
         {...register("email")}
       />
 
@@ -50,6 +55,7 @@ const SignIn = () => {
         title="인증번호"
         placeholder="인증번호를 입력해주세요"
         buttonName="인증 확인"
+        required
       />
 
       <Button type="submit" size="medium" disabled={!isDirty && isChecked}>

@@ -10,6 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "@/pages/auth/login";
 import SignIn from "@/pages/auth/signin";
 import Publicity from "@/pages/mypage/publicity";
+import Find from "@/pages/auth/find";
 
 const Router = () => {
   return (
@@ -19,6 +20,7 @@ const Router = () => {
       {/* 로그인 / 회원가입 */}
       <Route path="/login" element={<Login />} />
       <Route path="/signin" element={<SignIn />} />
+      <Route path="/find" element={<Find />} />
 
       {/* 마이페이지 */}
       <Route path="/mypage/liked" element={<Liked />} />

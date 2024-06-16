@@ -33,7 +33,7 @@ const Login = () => {
         <Button type="button" size="medium" onClick={() => navigate("/signin")}>
           회원가입
         </Button>
-        <Button type="button" size="medium">
+        <Button type="button" size="medium" onClick={() => navigate("/find")}>
           아이디 / 비밀번호 찾기
         </Button>
       </div>
