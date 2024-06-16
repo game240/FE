@@ -10,17 +10,17 @@ const FindId = () => {
 
   if (!success)
     return (
-      <S.SectionId>
+      <S.SectionFind>
         <InputField title="이메일" buttonName="인증 요청" />
         <InputField title="인증 번호" buttonName="인증 확인" />
         <Button size="large" onClick={handleFindId}>
           아이디 찾기
         </Button>
-      </S.SectionId>
+      </S.SectionFind>
     );
 
   return (
-    <S.SectionId>
+    <S.SectionFind>
       <h4 className="find-id__title">가입하신 아이디는 다음과 같습니다</h4>
       <div className="section-column">
         <p>아이디</p>
@@ -33,7 +33,7 @@ const FindId = () => {
       <Button size="large" onClick={() => navigate("/login")}>
         로그인 하러 가기
       </Button>
-    </S.SectionId>
+    </S.SectionFind>
   );
 };
 

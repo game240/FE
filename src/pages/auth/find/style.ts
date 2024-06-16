@@ -25,7 +25,7 @@ export const TabName = styled.h4<{ $isCurrent: boolean }>`
     ${({ $isCurrent }) => ($isCurrent ? COLOR.puple5 : COLOR.grey3)};
 `;
 
-export const SectionId = styled.section`
+export const SectionFind = styled.section`
   ${FlexColumn};
   width: 72rem;
   gap: 5.8rem;
