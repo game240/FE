@@ -9,6 +9,7 @@ import Review from "@/pages/mypage/review";
 import { Route, Routes } from "react-router-dom";
 import Login from "@/pages/auth/login";
 import SignIn from "@/pages/auth/signin";
+import Publicity from "@/pages/mypage/publicity";
 
 const Router = () => {
   return (
@@ -30,6 +31,7 @@ const Router = () => {
         path="/mypage/qna/mine"
         element={<QnAMore subject="내가 등록한 질문" />}
       />
+      <Route path="/mypage/publicity" element={<Publicity />} />
       <Route path="/mypage/profile-edit" element={<ProfileEdit />} />
     </Routes>
   );

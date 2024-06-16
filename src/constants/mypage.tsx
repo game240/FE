@@ -30,7 +30,7 @@ export const NAV_LIST = [
   {
     name: "공연 홍보하기",
     element: <AiFillNotification color="#FFF500" />,
-    url: "/mypage/liked",
+    url: "/mypage/publicity",
   },
   {
     name: "회원 정보 수정",
