@@ -12,7 +12,7 @@ const ProfileEdit = () => {
   const handleSubmitForm = () => alert("회원정보를 수정했습니다.");
 
   return (
-    <Layout currentTab="회원정보 수정">
+    <Layout currentTab="회원 정보 수정">
       <S.Form onSubmit={handleSubmit(handleSubmitForm)}>
         <div className="section-column">
           <S.SectionImg>
@@ -59,7 +59,7 @@ const ProfileEdit = () => {
         <InputField
           title="이메일"
           placeholder="이메일을 입력해주세요"
-          buttonName={isOpenEmailCheck ? "취소" : "인증 요청"}
+          buttonName={isOpenEmailCheck ? "인증 취소" : "인증 요청"}
           handleButtonClick={handleIsOpenEmailCheck}
           error={errors.email}
           {...register("email")}

@@ -2,10 +2,8 @@ import * as S from "./style";
 import Button from "@/components/Button";
 import InputField from "@/components/InputField";
 import { useToggle } from "@/hooks/useToggle";
-import { useNavigate } from "react-router-dom";
 
 const FindPw = () => {
-  const navigate = useNavigate();
   const [success, handleFindId] = useToggle(false);
 
   if (!success)

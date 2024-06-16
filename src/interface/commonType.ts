@@ -24,7 +24,10 @@ export interface PaginationPropsType {
 export interface InputFeildPropsType {
   title: string;
   buttonName?: string;
+  buttonName2?: string;
   error?: FieldError;
+  disabled?: boolean;
+  disabled1?: boolean;
   handleButtonClick?: () => void;
   [key: string]: unknown;
 }
