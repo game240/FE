@@ -5,10 +5,14 @@ import * as S from "./style";
 import { forwardRef } from "react";
 
 const InputField = forwardRef<HTMLInputElement, InputFeildPropsType>(
-  ({ title, buttonName, error, handleButtonClick, ...props }, ref) => {
+  ({ title, buttonName, handleButtonClick, error, ...props }, ref) => {
     return (
       <S.Container>
-        <h4>{title}</h4>
+        <S.Title>
+          <h4>{title}</h4>
+          {error && <S.ErrorMessage>{error.message}</S.ErrorMessage>}
+        </S.Title>
+
         <S.Field>
           <Input ref={ref} {...props} />
           {buttonName && (
@@ -17,7 +21,6 @@ const InputField = forwardRef<HTMLInputElement, InputFeildPropsType>(
             </Button>
           )}
         </S.Field>
-        <S.ErrorMessage>{error && error.message}</S.ErrorMessage>
       </S.Container>
     );
   }

@@ -32,7 +32,7 @@ const schema = z
     if (data.password !== data.confirmPassword) {
       context.addIssue({
         code: "custom",
-        message: "비밀번호와 비밀번호 확인이 일치하지 않습니다.",
+        message: "비밀번호가 일치하지 않습니다.",
         path: ["confirmPassword"],
       });
     }

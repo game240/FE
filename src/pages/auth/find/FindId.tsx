@@ -11,7 +11,7 @@ const FindId = () => {
   if (!success)
     return (
       <S.SectionFind>
-        <InputField title="이메일" buttonName="인증 요청" />
+        <InputField title="이메일" buttonName="인증 요청" errorMessage="left" />
         <InputField title="인증 번호" buttonName="인증 확인" />
         <Button size="large" onClick={handleFindId}>
           아이디 찾기
