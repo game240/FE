@@ -55,6 +55,10 @@ const SignIn = () => {
         title="인증번호"
         placeholder="인증번호를 입력해주세요"
         buttonName="인증 확인"
+        handleButtonClick={() => {
+          // 성공했을 경우
+          // handleChecked(true);
+        }}
         required
       />
 
