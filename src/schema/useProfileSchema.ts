@@ -23,10 +23,9 @@ const schema = z
 
     email: z
       .string()
-      .regex(
-        /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i,
-        { message: "이메일 형식과 맞지 않습니다." }
-      ),
+      .regex(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i, {
+        message: "이메일 형식과 맞지 않습니다.",
+      }),
   })
   .superRefine((data, context) => {
     if (data.password !== data.confirmPassword) {
@@ -42,12 +41,14 @@ export const useProfileSchema = () => {
   const {
     register,
     handleSubmit,
+    trigger,
     formState: { errors, isDirty },
   } = useForm({
-    mode: "onSubmit",
-    reValidateMode: "onSubmit",
+    // 입력창에서 벗어나면(blur) 트리거
+    mode: "onBlur",
+    reValidateMode: "onBlur",
     resolver: zodResolver(schema),
   });
 
-  return { register, handleSubmit, isDirty, errors };
+  return { register, handleSubmit, trigger, isDirty, errors };
 };
