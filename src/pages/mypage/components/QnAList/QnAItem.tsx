@@ -10,26 +10,20 @@ const QnAItem = () => {
   return (
     <S.ItemContainer onClick={handleIsOpen}>
       <S.Question>
-        <FaQuestionCircle size="3.2rem" color={COLOR.puple7} />
+        <FaQuestionCircle size="3.2rem" color={COLOR.purple7} />
         <p className="title">환불하려면 어떻게 해야하나요?</p>
-        {isOpen ? (
-          <AiOutlineUp className="arrow" />
-        ) : (
-          <AiOutlineDown className="arrow" />
-        )}
+        {isOpen ? <AiOutlineUp className="arrow" /> : <AiOutlineDown className="arrow" />}
       </S.Question>
 
       <S.Answer $isOpen={isOpen}>
         <FaLightbulb size="3.2rem" color="#FFD12E" />
         <p className="title">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-          eveniet dignissimos incidunt praesentium delectus quis necessitatibus?
-          Corrupti id eius voluptate, necessitatibus laboriosam ullam nulla
-          omnis corporis cum, at, eaque maxime.Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Dolores eveniet dignissimos incidunt
-          praesentium delectus quis necessitatibus? Corrupti id eius voluptate,
-          necessitatibus laboriosam ullam nulla omnis corporis cum, at, eaque
-          maxime.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet dignissimos
+          incidunt praesentium delectus quis necessitatibus? Corrupti id eius voluptate,
+          necessitatibus laboriosam ullam nulla omnis corporis cum, at, eaque maxime.Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Dolores eveniet dignissimos incidunt
+          praesentium delectus quis necessitatibus? Corrupti id eius voluptate, necessitatibus
+          laboriosam ullam nulla omnis corporis cum, at, eaque maxime.
         </p>
       </S.Answer>
     </S.ItemContainer>

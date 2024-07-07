@@ -8,7 +8,7 @@ import QnAMore from "@/pages/mypage/qna-more";
 import Review from "@/pages/mypage/review";
 import { Route, Routes } from "react-router-dom";
 import Login from "@/pages/auth/login";
-import SignIn from "@/pages/auth/signin";
+import SignUp from "@/pages/auth/signup";
 import Publicity from "@/pages/mypage/publicity";
 import Find from "@/pages/auth/find";
 
@@ -19,7 +19,7 @@ const Router = () => {
 
       {/* 로그인 / 회원가입 */}
       <Route path="/login" element={<Login />} />
-      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
       <Route path="/find" element={<Find />} />
 
       {/* 마이페이지 */}
@@ -29,10 +29,7 @@ const Router = () => {
       <Route path="/mypage/management" element={<Management />} />
       <Route path="/mypage/qna" element={<QnA />} />
       <Route path="/mypage/qna/faq" element={<QnAMore subject="FAQ" />} />
-      <Route
-        path="/mypage/qna/mine"
-        element={<QnAMore subject="내가 등록한 질문" />}
-      />
+      <Route path="/mypage/qna/mine" element={<QnAMore subject="내가 등록한 질문" />} />
       <Route path="/mypage/publicity" element={<Publicity />} />
       <Route path="/mypage/profile-edit" element={<ProfileEdit />} />
     </Routes>

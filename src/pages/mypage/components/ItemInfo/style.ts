@@ -12,7 +12,7 @@ export const Container = styled.div`
   .evaluation {
     font-size: 2rem;
     ${FONT_BOLD};
-    color: ${COLOR.puple4};
+    color: ${COLOR.purple4};
   }
 `;
 
@@ -43,7 +43,7 @@ export const Price = styled.div<{ $soldOut: boolean }>`
     text-align: center;
     font-size: 2rem;
     ${FONT_BOLD};
-    color: ${COLOR.puple4};
+    color: ${COLOR.purple4};
   }
 
   .soldOut {

@@ -15,7 +15,7 @@ export const Item = styled.div<{ $isCurrent: boolean }>`
   ${FlexBetweenCenter};
   padding: 2.5rem 3rem;
   background-color: white;
-  border: ${({ $isCurrent }) => $isCurrent && `0.3rem solid ${COLOR.puple4}`};
+  border: ${({ $isCurrent }) => $isCurrent && `0.3rem solid ${COLOR.purple4}`};
   border-radius: 5rem;
   cursor: pointer;
   transition: transform 0.15s;
@@ -31,6 +31,6 @@ export const Item = styled.div<{ $isCurrent: boolean }>`
 
   &:hover {
     ${SCALE};
-    background-color: ${COLOR.puple2};
+    background-color: ${COLOR.purple2};
   }
 `;

@@ -4,7 +4,7 @@ import { useProfileSchema } from "@/schema/useProfileSchema";
 import Button from "@/components/Button";
 import { useState } from "react";
 
-const SignIn = () => {
+const SignUp = () => {
   const [isEmailRequestSent, setIsEmailRequestSent] = useState(false); // 이메일 인증 요청 전송 여부
   const [isEmailChecked, setIsEmailChecked] = useState(false); // 이메일 인증 확인
   const [isFormValid, setIsFormValid] = useState(false); // 모든 입력과 인증 상태가 정상적인지
@@ -35,7 +35,7 @@ const SignIn = () => {
       <h2>회원 가입</h2>
       <InputField
         title="아이디"
-        placeholder="아이디를 입력해주세요"
+        placeholder="아이디를 입력해주세요."
         error={errors.id}
         required
         // onBlur 발생 시 handleBlur 호출, register 함수 연결
@@ -43,7 +43,7 @@ const SignIn = () => {
       />
       <InputField
         title="닉네임"
-        placeholder="닉네임을 입력해주세요"
+        placeholder="닉네임을 입력해주세요."
         error={errors.nick_name}
         required
         {...register("nick_name", { onBlur: () => handleBlur("nick_name") })}
@@ -51,7 +51,7 @@ const SignIn = () => {
       <InputField
         type="password"
         title="비밀번호"
-        placeholder="비밀번호를 입력해주세요"
+        placeholder="비밀번호를 입력해주세요."
         error={errors.password}
         required
         {...register("password", { onBlur: () => handleBlur("password") })}
@@ -59,14 +59,14 @@ const SignIn = () => {
       <InputField
         type="password"
         title="비밀번호 확인"
-        placeholder="비밀번호를 입력해주세요"
+        placeholder="비밀번호를 입력해주세요."
         error={errors.confirmPassword}
         required
         {...register("confirmPassword", { onBlur: () => handleBlur("confirmPassword") })}
       />
       <InputField
         title="이메일"
-        placeholder="이메일을 입력해주세요"
+        placeholder="이메일을 입력해주세요."
         buttonName="인증 요청"
         error={errors.email}
         required
@@ -78,7 +78,7 @@ const SignIn = () => {
 
       <InputField
         title="인증번호"
-        placeholder="인증번호를 입력해주세요"
+        placeholder="인증번호를 입력해주세요."
         buttonName="인증 확인"
         handleButtonClick={() => {
           // 이메일 인증이 성공했을 경우
@@ -96,4 +96,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

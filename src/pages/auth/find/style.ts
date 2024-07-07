@@ -21,8 +21,7 @@ export const TabName = styled.h4<{ $isCurrent: boolean }>`
   display: grid;
   place-items: center;
   width: 100%;
-  border-bottom: 0.5rem solid
-    ${({ $isCurrent }) => ($isCurrent ? COLOR.puple5 : COLOR.grey3)};
+  border-bottom: 0.5rem solid ${({ $isCurrent }) => ($isCurrent ? COLOR.purple5 : COLOR.grey3)};
 `;
 
 export const SectionFind = styled.section`

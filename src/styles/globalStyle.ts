@@ -1,12 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import {
-  FONT_H1,
-  FONT_H2,
-  FONT_H3,
-  FONT_H4,
-  FONT_H5,
-  FONT_LARGE,
-} from "./font";
+import { FONT_H1, FONT_H2, FONT_H3, FONT_H4, FONT_H5, FONT_LARGE } from "./font";
 import COLOR from "./color";
 import { FlexColumn } from "./flex";
 import { FONT_BOLD } from "./fontWeight";
@@ -70,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
     ${FONT_LARGE};
 
     &:focus {
-      border: 1px solid ${COLOR.puple5};
+      border: 1px solid ${COLOR.purple5};
     }
   }
 
@@ -86,7 +79,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    background-color: ${COLOR.puple1};
+    background-color: ${COLOR.purple1};
     font-size: 62.5%; // 10px
   }
 
