@@ -16,6 +16,10 @@ export const Container = styled.div`
   height: 95px;
   padding: 0 13.5rem;
 
+  h3 {
+    color: ${COLOR.purple7};
+  }
+
   .login {
     width: 15.1rem;
     color: ${COLOR.grey6};
