@@ -8,6 +8,8 @@ function App() {
   return (
     <>
       <Nav />
+      {/* 네비게이션 바 padding */}
+      <div style={{ paddingTop: "95px" }}></div>
       <Contents>
         <Router />
       </Contents>

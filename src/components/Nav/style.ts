@@ -5,6 +5,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   ${FlexBetweenCenter};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 86%; /* 100%: 아이콘 표시 X */
+  background-color: ${COLOR.puple1};
+  /* 다른 요소 위 표시 */
+  z-index: 1000;
+
   height: 95px;
   padding: 0 13.5rem;
 
